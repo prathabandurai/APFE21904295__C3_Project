@@ -32,7 +32,14 @@ public class Restaurant {
 
     }
 
-  
+    public int getTotalCost(List<Item> items)
+    {
+        int totalCost=0;
+        for(Item item: items) {
+            totalCost +=item.getPrice();
+        }
+        return  totalCost;
+    }
     private Item findItemByName(String itemName){
         for(Item item: menu) {
             if(item.getName().equals(itemName))
